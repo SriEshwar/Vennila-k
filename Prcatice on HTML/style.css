@@ -1,0 +1,26 @@
+td{
+   border: 1px solid;
+   border-collapse:collapse;
+
+}
+table{
+    margin-right: 50%;
+    align-items: center;
+}
+h1{
+font-size: 50px;
+text-align: center;
+}
+p{
+    color:brown;
+    font-size: 25px;
+}
+img{
+    height: 300px;
+    width: 350px;
+    margin-left:40%;
+    
+}
+*{
+    background-color: blanchedalmond;
+}
