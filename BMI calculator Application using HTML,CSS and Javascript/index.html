@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CALCULATOR</title>
+</head>
+<style>
+    body{
+        background-image: url("images/bmibg.webp");
+        font-family:cursive;
+        color: black;
+    }
+    
+    .box{
+       height:500px;
+       width:400px;
+       margin: 200px auto;
+       background-color: rgba(252, 167, 111, 0.5);
+        border-radius:10px;
+        padding:30px;
+
+    }
+    .form{
+        font-size: 20px;
+    }
+    .button{
+        text-align: center;
+        margin-top: 20px;
+        background-color:#bb0155;
+        border-radius:5px;
+        height:30px;
+        font-weight:bolder;
+        padding: 5px;
+        letter-spacing: 1px;
+        border: none;
+        background-color: #a30707;
+    }
+    button:hover{
+        cursor:pointer;
+    }
+   #result{
+    text-align: center;
+    color:rgb(17, 14, 14);
+    margin-top:20px;
+    font-size:26px;
+   }
+</style>
+<body> 
+   <div class="box">
+    <h1 style="color : #614545">BMI CALCULATOR!!</h1>
+    
+    <div class="form">
+        <label for="name">Enter your name</label><br>
+        <input type="text" placeholder="Eg : Surya" id="name" required><br><br>
+        <label for="male">Male</label>
+        <input type="radio"  id="male" name="gender"> &nbsp; &nbsp; &nbsp;
+        <label for="female">Female</label>
+        <input type="radio"  id="female" name="gender"> <br><br>
+        <label for="weight">Enter your Weight (in kg)</label>
+        <input type="number" id="weight" placeholder="Eg:54"><br><br>
+        <label for="height">Enter your Height (in cm)</label><br>
+        <input type="number"  id="height" placeholder="Eg:154">
+    </div>
+    
+    <div class="button">
+        <button type="submit" onclick="calculate()">CALCULATE</button>
+   </div>
+   <div id="result">
+
+   </div>
+</div>
+<script>
+    function calculate()
+    {
+
+    let name=document.getElementById("name").value;
+    let height=document.getElementById("height").value;
+    let weight=document.getElementById("weight").value;
+    console.log(name + " " + height + " "+ weight);
+    if(name==="" || height==="undefined" || weight==="undefined")
+    result.innerHTML="Please enter the details:)";
+    else{
+        let mtr=height/100;
+        let bmi=weight/(mtr*mtr);
+        let res=parseFloat(bmi).toFixed(2);
+        let val;
+        if(res<16)
+        val="Severe thinness";
+        else if(res>=16&&res<=17)
+        val="moderate thinness";
+        else if(res>17 && res<=18.5)
+        val="mild thinness";
+        else if(res>18.5 && res<=25)
+        val="normal";
+        else if(res>25 && res<=30)
+        val="overweight";
+        else if(res>30&& res<=35)
+        val="obese class I";
+        else if(res>35 && res<=40)
+        val="obese class II";
+        else
+        val="obese class III"
+
+        result.innerHTML="Dear "+name+", Your BMI is "+res+" - "+val;
+
+    }
+  
+    }
+</script>
+</body>
+</html>
