@@ -2,10 +2,10 @@ const form = document.getElementById("form");
 const username = document.getElementById("userName");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
-const password2 = document.getElementById("confirmPassword");
+const confirmpassword = document.getElementById("confirmPassword");
 
-form.addEventListener("submit", e => {
-  e.preventDefault();
+form.addEventListener("submit", data => {
+  data.preventDefault();
   if(checkInputs())
   window.location.href="login.html";
   
@@ -16,7 +16,7 @@ function checkInputs() {
   const usernameValue = username.value.trim(); //trim to delete blanc space.
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
-  const password2Value = password2.value.trim();
+  const confirmpasswordValue = password2.value.trim();
 
   if (usernameValue === "") {
     setErrorInput(username, "UserName cannot be blanc.");
@@ -46,12 +46,12 @@ else {
 }
 
   //###################################
-  if (password2Value === "") {
-    setErrorInput(password2, "Password connot be blanc.");
-  } else if (password2Value !== passwordValue) {
-    setErrorInput(password2, "Password dose not match.");
+  if (confirmpasswordValue === "") {
+    setErrorInput(confirmpassword , "Password connot be blanc.");
+  } else if (confirmpasswordValue !== passwordValue) {
+    setErrorInput(confirmpassword , "Password dose not match.");
   } else {
-    setSuccessInput(password2);
+    setSuccessInput(confirmpassword );
   }
 }
 
