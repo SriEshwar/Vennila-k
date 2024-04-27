@@ -1,0 +1,45 @@
+.head{
+    background-color:antiquewhite;
+    font-size: xx-large;
+}
+.para{
+    background-color: bisque;
+    font-size: xx-large;
+}
+tr,td{
+    border:  solid;
+    border-collapse:separate;
+    font-size: xx-large;
+    height: 90px;
+    width: 90px;
+}
+.form{
+    background-color:burlywood
+    ;
+}
+.table{
+    background-color:aquamarine;
+}
+.iframe{
+    height: fit-content;
+    width: fit-content;
+}
+.emoji{
+    background-color: yellowgreen;
+    font-size: xx-large;
+}
+a{
+text-decoration: none;
+font-size: larger;
+}
+img{
+    height:600px;
+    width:600px;
+}
+video{
+    margin-left: 28%;
+    margin-right: 30%;
+}
+.anc{
+    background-color:skyblue;
+}
