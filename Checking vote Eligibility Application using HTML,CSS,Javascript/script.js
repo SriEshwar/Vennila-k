@@ -1,17 +1,17 @@
-function sub(){
-    let b=Number(document.getElementById('convert').value);
-    let name=(document.getElementById('name').value);
-if(name=="" || b=="")
+function submitForm(){
+    let UserAge=Number(document.getElementById('convert').value);
+    let UserName=(document.getElementById('name').value);
+if(UserName=="" || UserAge=="")
 {
     alert("PLAESE ENTER DETAILS");
 }
 else
 {
-    if(b>=18){
-        alert(name+" You Are Eligible For Voting")
+    if(UserAge>=18){
+        alert(UserName+" You Are Eligible For Voting")
     }
     else{
-    alert(name+" You Are Not Eligible For Voting")
+    alert(UserName+" You Are Not Eligible For Voting")
     }
 }
 }
