@@ -47,7 +47,7 @@ let EmployeeNames: string[] = ['Ram', 'Raju', 'vennila'];
 console.log(EmployeeNames);
 
 // Map
-let keyValueMap: Map<string, number> = new Map();
-keyValueMap.set('one', 1);
-keyValueMap.set('two', 2);
-console.log(keyValueMap);
+let Employeenameage: Map<string, number> = new Map();
+Employeenameage.set('vennila', 23);
+Employeenameage.set('sneha', 22);
+console.log(Employeenameage);
