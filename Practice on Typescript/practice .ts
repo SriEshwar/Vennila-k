@@ -1,8 +1,8 @@
 // Any
 let EmployyeId: any = 1123;
-EmployyeId = 'Hello';
-EmployyeId = true;
-console.log(EmployyeId);
+EmployeeId = 'Hello';
+EmployeeId = true;
+console.log(EmployeeId);
 
 // Tuple
 let tuple: [number, string] = [10, 'Hello'];
