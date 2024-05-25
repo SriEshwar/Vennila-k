@@ -1,0 +1,38 @@
+
+  use employee; // create or use database
+
+// insert one into collection 
+
+   db.product .insertOne({name:"vennila",age:18})     // insert the product collection into shp database  // if we insert two or more it only consider 1 document is inserted
+
+// insert many values 
+
+    db.employee.insertMany([ {name:"vennila",details:{id:234,salary:12345}} ,{name:"nila",details:{id:56789,salary:45678}} ])
+
+                            ---------**     db.product.findOne()  **----------------like select operation it show the product collection value
+   db.product.findOne()     // we can use find() also
+
+
+                            ------**     db.product.findOne(argument)  **---- if we want to get paticular 1 document
+
+  db.employee.findOne({name:"nila"})
+
+
+                              ------**     UPDATE    updateOne() updateMany() **----
+
+   db.nila.updateOne({name:"vennila"},{$set:{"college.name":"psg"}});
+   db.nila.updateMany({name:"vennila"},{$set:{"college.name":"psg"}});
+
+                                ------**     DELETE     deleteOne() deleteMany() **----
+
+    db.nila.deleteOne({"college.name":"sece"});
+    db.employee.deleteMany({"details.id":234})
+
+                               ---------------**     insert collection as json format  **-------------------------- 
+    db.product.insertOne({name:"vennila",age:18
+... ,field:{dep:"ece",clg:"sece",sec:"c"}})
+
+
+
+      
+    
