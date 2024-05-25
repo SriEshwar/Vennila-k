@@ -1,0 +1,53 @@
+
+    1)in 
+          db.employee.find({},{name:1})
+    2)limit    
+         db.employee.find({},{name:1}).limit(2) 
+    3)skip  
+         db.employee.find({},{name:1}).skip(2);
+         db.employee.find({},{name:1,_id:0,college:"sece"}).skip(3)  // skip first 3 and start to print from 4 th name to last 
+
+    4)Sort (asc desc) 
+         db.employee.find().sort({id:1});asc
+         db.employee.find({},{name:1,_id:0,college:"sece"}).sort({name:1})   /// gives name as ascending name:1 1 means ascending
+
+         db.emp.find({},{name:1,_id:0,college:"sece"}).sort({name:-1})   //-1 means descending 
+
+
+          --------------------**query operators**----------------------------      
+
+ 1)MongoDB  comparison operator: 
+          i)$eq	
+               db.employee.find({name:{$eq:"ve"}},{name:1,_id:0}) // if we want name only we use so we write option
+          ii)$ne
+               db.employee.find({name:{$ne:"ve"}},{name:1,_id:0})
+          iii)$gt
+               db.employee.find({id:{$gt:70}},{name:1,_id:0,id:1})
+          iv)$gte	 
+               db.employee.find({id:{$gte:70}},{name:1,_id:0,id:1})
+          v)$lt	
+               db.employee.find({id:{$lt:90}},{name:1,_id:0,id:1})
+          vi)$lte	
+              db.employee.find({id:{$lte:90}},{name:1,_id:0,id:1})
+          vii)$in	
+             db.employee.find({id:{$in:[78,90,123]}},{name:1,_id:0,id:1})
+          viii)$nin	
+              db.employee.find({id:{$nin:[78,90,123]}},{name:1,_id:0,id:1})
+
+
+ 2)MongoDB – Logical Query Operators
+         I) $and	
+            db.employee.find({$and:[{id:{$gt:70}},{name:{$eq:"bnm"}}]},{name:1,_id:0,id:1})
+         II)$or 
+            db.employee.find({$or:[{id:{$gt:70}},{name:{$eq:"bnm"}}]},{name:1,_id:0,id:1}
+        III)$not	
+             db.employee.find({id:{$not:{$gt:90}}},{name:1,_id:0,id:1})
+        IV)$nor	
+              db.employee.find({$nor:[{id:{$gt:70}},{name:{$eq:"bnm"}}]},{name:1,_id:0,id:1})  
+
+3)EVALUATION OPERATOR:
+          II)$where   
+            db.employee.find({$where:function(){return this.name=="vennila"}}) 
+
+
+           
