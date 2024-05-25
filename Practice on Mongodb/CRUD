@@ -1,0 +1,5 @@
+ ---------------**    CRUD OPERATIONS  **-------------------------- 
+c-create      create db insertOne () ,insertMany()
+r-read        findOne(),find(),findOne(argument) find(arguument)
+u-update      updateOne() updateMany()
+d-delete      deleteOne(),deleteMany()
