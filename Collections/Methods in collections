@@ -1,0 +1,57 @@
+collection 
+     collection is interface 
+     common collection method in java
+
+size()  --> length of set ,list
+isEmpty() => return boolean 
+iterator() => move each and every element 
+toArray() => convert collection to array
+
+contains() => find particular element present or not
+containsAll() =>is one collection contains all elements in another collection
+
+add() => add element into collection
+addAll() => add one collection element to another collection
+
+remove()  => delete element in collection
+removeAll() => 
+
+retainAll()
+clear() => remove all collection data.
+
+
+
+List --> is an interface
+
+set()
+get()
+indexof()
+lastindexof() --> next() ,previous() 
+sublist()
+sort()
+listiterator()
+
+
+queue
+
+add() => add element (if it is not add any element it throw exception)
+offer() =>its also add element if it is not add any element it return false 
+remove() => remove first
+poll() => remove  if it is not remove any element it return false 
+peek()
+
+Map
+
+size()
+isEmpty()
+put(k,v) => add key value
+get(k)
+remove(k)
+entrySet()=k,v ==print key value pair 
+keySet()=k only key
+values() only value
+putAll()  => if we have already have exisiting map we want to add to another map
+clear()
+replace()
+putIfAbsent() = value is not entry then only we can add 
+
