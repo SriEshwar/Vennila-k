@@ -1,0 +1,44 @@
+Exception Handling
+
+To handle Exception using these keyword --> try ,  catch , finally
+sometimes use  --> try,throw,catch,finally  (thhroes)
+
+checked exception   compiled time 
+       Filenotfound Exception
+       Sql Exception
+       Nullpointer Exception
+       IO Exception
+       Negativeindex Exception      
+Unchecked Exception runtime 
+
+
+try{
+throw exception as object
+}
+catch(ArrayIndexOutofException object)
+{
+}
+catch(classNotFoundxception object1)
+{
+}
+catch(exception object2)
+{
+  // default catch so should given in end of the statement
+}
+
+
+try should come with catch or finally
+we can given nested try.
+
+Finally
+
+finally will work after try catch
+if try catch doesnot wrk finally will work  there is no connection between them.
+
+try
+......
+catch
+......
+finally
+
+
