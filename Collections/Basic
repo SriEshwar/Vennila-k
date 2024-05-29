@@ -1,0 +1,38 @@
+collection
+    it is like holder/container
+    it is a framework
+    group of object
+
+why collection?
+    
+    in real time example we want to carry different types of things in one place another place 
+    one way --> carry one by one
+    or    carry container which holds all things
+    the 2nd way is easy and time save way
+
+
+
+set ------->   duplicate will not allow
+               does not maintain order
+    hashset
+    TreeSet --> for order maintain we will go to tree set
+
+Stack  ----->  data store in last in first out(LIFO)
+               transcational history or whatsapp chats
+
+Queue --------> data store in First In First Out (FIFO)
+          
+Map/Dictionary --->  It is key Value pair
+
+    HashMap
+    TreeMap
+
+
+LIST   
+     ArrayList -> It is like array continous memory location
+     LinkedList -> It is in Form of Node (previous node + Data +Next node) 
+
+
+
+
+
