@@ -1,0 +1,113 @@
+Checked Error:
+
+1.IOException
+
+import java.util.*
+public class IOException {
+public static void main(String[] args) throws FileNotFoundException {
+BufferedReader br = new BufferedReader(new FileReader("Exceptions.txt"));
+String line = br.readLine(); //error:
+}
+}
+
+2.FileNotFoundException
+
+import java.util.*;
+public class FileNotFound {
+public static void main(String[] args) {
+File file = new File("Exceptions.txt");
+FileReader reader = new FileReader(file);
+}
+}
+error : Unhandled exception type FileNotFoundExceptionJava
+
+
+
+3.NoSuchMethodException
+
+import java.lang.reflect.Method;
+public class NoSuchMethodException {
+public static void main(String[] args) {
+try {
+Method method = EmployeeClass.class.getMethod("employeedetails");
+method.invoke(new EmployeeClass());
+} catch (NoSuchMethodException e) {
+System.out.println("NoSuchMethodException occurred: " + e.getMessage());
+} catch (Exception e) {
+System.out.println("An unexpected exception occurred: " + e.getMessage());
+}
+}
+}
+
+class EmployeeClass {
+public void employeedetails() {		//if doSomething is missing, it invokes NoSuchMethod Exception
+System.out.println("Doing something...");
+}
+}
+
+4.ClassNotFoundException
+
+public class ClassnotFound {
+public static void main(String[] args) throws ClassNotFoundException {
+Class.forName("hello"); 
+}
+}
+
+
+Unchecked Error
+
+1.NullPointerException
+ 
+class NullPointerExample {
+public static void main(String[] args) {
+try {
+String empName = "";
+System.out.println(str.length());	
+} 
+catch (NullPointerException error) {
+System.out.println("NullPointerException occurred: " + error.getMessage());
+}
+}
+}
+
+2.ArithmeticException
+
+class ArthmeticExample {
+public static void main(String[] args) {
+try {
+int result = 1 / 0;	 //error:ArithmeticException occurred: / by zero
+} catch (ArithmeticException error) {
+System.out.println("ArithmeticException occurred: " + error.getMessage());
+}
+}
+}
+
+
+3.ArrayIndexOutofBoundsException
+
+class ArrayOutOBExample {
+public static void main(String[] args) {
+try {
+int[]empId = new int[5];
+System.out.println(empId[10]);	 
+}
+catch (ArrayIndexOutOfBoundsException error) {
+System.out.println("ArrayIndexOutOfBoundsException occurred: " + error.getMessage());
+}
+}
+}
+
+
+4.IllegalArugmentException
+
+class Age {
+public static void main(String[] args) {
+try {
+int age = -5;
+if (age < 0) {
+throw new IllegalArgumentException("height cannot be negative");	//error:IllegalArgumentException
+}
+} catch (IllegalArgumentException error) {
+System.out.println("IllegalArgumentException occurred: " + error.getMessage());
+}
+}
