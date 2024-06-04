@@ -1,0 +1,59 @@
+------------------------------------------------**************************************** DAY 1***************************************-------------------
+
+1. what is React
+2.React js History
+3. Why React
+4.Features and Advantages
+
+
+React Js
+   owner of react -- Jordan Walke
+   Fact js is alter to react js
+   product of google
+   Focus on user interface
+   FRONT END Language
+Latest version -18.3.1
+Mobile developent --> react native
+  
+BASIC
+
+   open source js library for building user inerface
+   allows us to create reusable ui component
+   it is not a framework it is a library
+   Focus on doing one thing Ui
+
+component  building block
+   Functional component
+   Class component
+
+component based architectre
+    lets break down our application into small encapsulation parts 
+
+
+FEATURES :
+
+ 1)unidirectional
+ 2)XML
+ 3)virtual dom:
+    for any small change to a state inthe ui ,it corresponding DOM represntation needs to be channged and the ui need to be rendered
+    updating dom itself not a costly process but rendering & re-rendering the ui is expensive
+ 4)Single page application(spa)
+    in large scale project if we refresh tthe whole document refresh so it consume large data in  spa it will refresh the particular page it consume small amount of data
+    
+5) JSX -->Javascript XML   allows us to write HTML in React ,make easier to write and add HTML ,makes code easier to write and understand
+
+ 
+Features of ES6 
+let vs const 
+arrow function
+template literal
+default parameter
+objecr literal
+rest anddspread operators
+
+
+--------- Environmental setup -----------
+  
+first command    
+npm install create-react-app -g  
+create-react-app demoapp (app name always in lowercase) 
