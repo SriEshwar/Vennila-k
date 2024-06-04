@@ -1,0 +1,58 @@
+-------------------********* Day 2 *****-------------
+
+1.components  building blocks
+2.JSX  
+
+class components always come with render method
+
+src/index.js 
+  is entry level all our node application
+  what to render where to render
+src/app.js
+  root component in react
+
+
+--------*********** src/Hello.js  *******------------------
+
+import React from "react"
+function Hello(){
+return (
+<div> HELLO</div>
+)
+}
+export default Hello;
+
+--------*********** src/Welcome.js  *******------------------
+
+import React,{Component, useSyncExternalStore} from 'react'
+class Welcome extends Component{
+    render(){
+        return(
+            <div> 
+            <h1 style={{color:'red'}}>Hii! You are welcome to Learn React </h1>
+            <h2> Hello I'm {this.props.name} and i'm from {this.props.location}</h2>
+            <h3>Today's Topic:{this.props.children}</h3>
+            </div>
+        )
+    }
+}
+export default Welcome;
+
+----***** src/App.js *** ---
+
+import logo from './logo.svg';
+import Hello from './Hello';
+import Welcome from './Welcome';
+import './App.css';
+
+function App() {
+  return (
+    <div>
+      <h1 style={{color:'green'}}>Hii Everyone.... </h1>
+    <Hello />
+    <Welcome name="vennila" location="coimbatore">Day 2 -React</Welcome>
+    </div>
+  );
+}
+
+export default App;
