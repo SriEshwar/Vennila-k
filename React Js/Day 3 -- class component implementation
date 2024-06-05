@@ -1,0 +1,67 @@
+------------------------ ************** User interface if we give name in input box it will change and display  ************************** ---------------------------------
+
+------ src/Wishing.js ---------------
+
+
+import React,{Component} from 'react'
+class Wishing extends Component{
+   constructor(props){
+    super(props)
+    this.state={
+        username : "sneha"
+        //Address : "coimbatore"
+    }
+   }
+   ChangeName(event){
+    this.setState({
+        username :event.target.value
+    })
+   }
+    render(){
+        return(
+            <div>Wishing
+                <h1>Hi {this.state.username} welcome </h1>
+           Enter your username :<input type='text' name='username' value={this.state.username}
+           onChange={(event)=>this.ChangeName(event)}/>
+            </div> 
+        )
+    }
+}
+export default Wishing;
+
+-------------- src/App.js    import wishing .js
+
+
+
+------------------------ **************Add to cart increment items count  ************************** ---------------------------------
+
+---src/AddToCart.js
+
+import React,{Component} from 'react'
+class AddToCart extends Component{
+   constructor(props){
+    super(props)
+    this.state={
+       cart : 0
+    }
+   }
+   incrementCounter(event){
+    this.setState({
+        cart:this.state.cart + 1
+    })
+   }
+    render(){
+        return(
+            <div>
+                <h1 style={{color:"red"}}>AddToCart</h1>
+<h2>{this.state.cart}</h2>
+<button onClick={(event)=>this.incrementCounter(event)}> 
+  cart:{this.state.cart}
+  </button>
+            </div> 
+        )
+    }
+}
+export default AddToCart;
+
+and import on App.js
