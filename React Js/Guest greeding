@@ -1,0 +1,116 @@
+//LoginControl
+
+import React,{Component} from 'react'
+import ReactDOM from 'react-dom/client'
+import LoginButton from './LoginButton';
+import LogoutButton from './LogoutButton';
+import Greeting from './Greeting';
+
+export default class LoginControl extends Component{
+  constructor(props)
+  {
+    super(props)
+    this.handleLoginClick=this.handleLoginClick.bind(this);
+    this.handleLogoutClick=this.handleLogoutClick.bind(this);
+    
+    this.state={
+    isLoggedIn :false
+     };
+
+  }
+handleLoginClick(){
+    this.setState({
+      isLoggedIn:true
+    });
+}   
+handleLogoutClick(){
+  
+}
+ render(){
+const isLoggedIn=this.state.isLoggedIn;
+let button;
+if(isLoggedIn){
+    button=<LogoutButton onClick={this.handleLoginClick}/>;
+      }
+      else{
+        button=<LoginButton onClick={this.handleLogoutClick}/>;
+
+      }
+        return(
+            <div>
+   <Greeting isLoggedIn={isLoggedIn}/>
+   {button}
+           </div> 
+        );
+    }
+}
+const root=ReactDOM.createRoot(document.getElementById('root'));
+root.render(<LoginControl/>);
+
+/--- Greeting.js
+
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import UserGreeting from "./UserGreeting";
+import GuestGreeting from './GuestGreeting';
+
+export default function Greeting(props) {
+    const isLoggedIn=props.isLoggedIn;
+    if(isLoggedIn){
+      return <UserGreeting />
+    }
+    else{
+        return <GuestGreeting/>
+    }
+    const root=ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<Greeting isLoggedIn={false}/>);
+    }
+
+/---- Guestgreeding.js
+
+import React from 'react';
+export default function GuestGreeting() {
+  return (
+    <div>
+      GuestGreeting
+      <h1> Hi this is Guest User </h1>
+    </div>
+  );
+}
+
+/--- Usergreeding.js
+
+import React from 'react';
+
+export default function UserGreeting() {
+  return (
+    <div>
+      UserGreeting
+
+    </div>
+  );
+}
+
+/-- LogoutButton
+
+import React from 'react'
+export default function LogoutButton(props) {
+    return(
+        <button onClick={props.onClick}>
+           Logout
+            </button>
+    )
+}
+ 
+
+
+/----- LoginButton
+
+import React from 'react'
+export default function LoginButton(props) {
+    return(
+        <button onClick={props.onClick}>
+           Login
+            </button>
+    )
+}
